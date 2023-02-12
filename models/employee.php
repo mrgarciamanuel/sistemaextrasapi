@@ -67,5 +67,47 @@
 
             return $stmt;          
         }        
+        public function create_employee(){
+            $query = "INSERT INTO $this->table SET name =:name, surname =:surname, username =:username, gender =:gender, description =:description, email =:email, nif =:nif, phone =:phone, profession1 =:profession1, profession2 =:profession2, profession3 =:profession3, country =:country, location =:location, cvhref =:cvhref";
+
+            //prepare statement
+            $stmt = $this->conn->prepare($query);
+
+            //clean data
+            $this->name = htmlspecialchars(strip_tags($this->name));
+            $this->surname = htmlspecialchars(strip_tags($this->surname));
+            $this->username = htmlspecialchars(strip_tags($this->username));
+            $this->gender = htmlspecialchars(strip_tags($this->gender));
+            $this->description = htmlspecialchars(strip_tags($this->description));
+            $this->email = htmlspecialchars(strip_tags($this->email));
+            $this->nif = htmlspecialchars(strip_tags($this->nif));
+            $this->phone = htmlspecialchars(strip_tags($this->phone));
+            $this->profession1 = htmlspecialchars(strip_tags($this->profession1));
+            $this->profession2 = htmlspecialchars(strip_tags($this->profession2));
+            $this->profession3 = htmlspecialchars(strip_tags($this->profession3));
+            $this->country = htmlspecialchars(strip_tags($this->country));
+            $this->location = htmlspecialchars(strip_tags($this->location));
+            $this->cvhref = htmlspecialchars(strip_tags($this->cvhref));
+
+            //binding of parameters
+            $stmt->bindParam('name', $this->name);
+            $stmt->bindParam('surname', $this->surname);
+            $stmt->bindParam('username', $this->username);
+            $stmt->bindParam('gender', $this->gender);
+            $stmt->bindParam('description', $this->description);
+            $stmt->bindParam('email', $this->email);
+            $stmt->bindParam('nif', $this->nif);
+            $stmt->bindParam('phone', $this->phone);
+            $stmt->bindParam('profession1', $this->profession1);
+            $stmt->bindParam('profession2', $this->profession2);
+            $stmt->bindParam('profession3', $this->profession3);
+            $stmt->bindParam('country', $this->country);
+            $stmt->bindParam('location', $this->location);
+            $stmt->bindParam('cvhref', $this->cvhref);
+
+            if($stmt->execute()){
+                return true;
+            }            
+        }
     }
 ?>

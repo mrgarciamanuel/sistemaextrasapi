@@ -2,7 +2,6 @@
 //initialization of all services
 include('../models/initialize.php');
 
-echo "dfsfklds";
 //instatiation of employee
 $employee = new Employee($db);
 
@@ -20,7 +19,4 @@ $employee_arr = array(
 );
 
 print_r(json_encode($employee_arr));
-
-
-
 ?>
