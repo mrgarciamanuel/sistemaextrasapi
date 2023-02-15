@@ -13,4 +13,6 @@
 
      define('APP_NAME', 'PHP SISTEMA EXTRAS REST API');
 
+     echo "Conexão feita";
+
 ?>
