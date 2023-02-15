@@ -1,0 +1,2 @@
+1 º flutter xmlhttprequest error - https://www.edoardovignati.it/solved-xmlhttprequest-error-in-flutter-web-is-a-cors-error/
+12715 CVP / 800208128

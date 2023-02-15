@@ -1,8 +1,8 @@
 <?php 
-    $db_user = "root";
-    $db_password = "";
+    $db_user = "garciamanuel";
+    $db_password = "ceciliaJoao01";
     $db_name = "sistemaextras";
-    $servername = "localhost";
+    $servername = "extra-workers-server.mysql.database.azure.com";
 
     $db = new PDO ("mysql:host=$servername; dbname=$db_name", $db_user, $db_password);
 
