@@ -1,1 +1,25 @@
 INSERT INTO `employee` (`id`, `name`, `surname`, `username`, `gender`, `description`, `email`, `nif`, `phone`, `profession1`, `profession2`, `profession3`, `country`, `location`, `cvhref`, `accountstate`, `linkedcompany`, `tsdia`) VALUES (NULL, 'Salvador', 'Mateus', 'salvadormateus', '1', 'Tenho 23 anos de idade sou software developer com experiencia comprovada no mercado, já trabalhei com desenvolvimento web, mobile, e desktop. Além disso possuo conhecimentos de gestão de projetos, metodologias ágeis e muito mais.', 'salvadormateus@gmailcom', '12345678', '123465798', '1', '2', '3', 'Portugal', 'Porto', 'www.google.com', NULL, NULL, NOW()), (NULL, 'António', 'Lutero', 'antoniolutero', '1', 'Tenho 23 anos de idade sou software developer com experiencia comprovada no mercado, já trabalhei com desenvolvimento web, mobile, e desktop. Além disso possuo conhecimentos de gestão de projetos, metodologias ágeis e muito mais.', 'antoniolutero@gmail.com', '789645132', '312546798', '4', '6', '2', 'Portugal', 'Lisboa', 'facebook.com', NULL, NULL, NOW()), (NULL, 'Rosa', 'André', 'rosaandre', '2', 'Tenho 23 anos de idade sou software developer com experiencia comprovada no mercado, já trabalhei com desenvolvimento web, mobile, e desktop. Além disso possuo conhecimentos de gestão de projetos, metodologias ágeis e muito mais.', 'rosaandre@twitter.com', '963852741', '258963741', '4', '2', '7', 'Portugal', 'Braga', 'www.twitter.com', NULL, NULL, NOW());
+
+
+
+-- Employee table creation
+create table employee (
+id int not null auto_increment primary key,
+name varchar(150),
+surname varchar(150),
+username varchar(150),
+gender int,
+description text,
+email varchar(150),
+nif  varchar(40),
+phone varchar(150),
+profession1 int,
+profession2 int,
+profession3 int,
+country varchar(100),
+location varchar(200),
+cvhref text,
+accountstate int,
+linkedcompanyh int,
+tsdia timestamp
+);
